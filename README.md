@@ -1,5 +1,5 @@
 # a-gen
-A simple script that generates word chains based on your inputs. **Make sure that you installed `prompt-sync` package if you're using source code!**
+A simple script that generates word chains based on your inputs. **Make sure that you installed `readline-sync` package if you're using source code! Use `npm i` or `npm i readline-sync` for that!**
 ## How to use it
 That's easy.
 1) Download [EXE](https://github.com/mat1rus/a-gen/releases/latest) or source code;
