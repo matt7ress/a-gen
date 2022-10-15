@@ -2,7 +2,7 @@
 A simple script that generates word chains based on your inputs. **Make sure that you installed `prompt-sync` package if you're using source code!**
 ## How to use it
 That's easy.
-1) Download [EXE](https://github.com/mat1rus/a-gen/releases/latest/build.exe) or source code;
+1) Download [EXE](https://github.com/mat1rus/a-gen/releases/latest) or source code;
 2) Run it and type some words. That's all!
 ## How it works
 A-Gen is based on NobDod algorithm you can't find anywhere in internet. The only projects that using NobDod algorithm are A-Gen, Magisk _(that's my discord bot I am not about [root thing](https://github.com/topjonhwu/Magisk); it uses A-Gen)_ and Andrey Bot _(another discord bot; NobDod made him; he's dead)_.
