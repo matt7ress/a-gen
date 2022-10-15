@@ -75,8 +75,30 @@ function gen() {
     };
     return str.join(' ');
 };
-const prompt = require('prompt-sync')({sigint: 1});
-console.log('> A-Gen v1.0.0\n> Based on NobDod algorithm\n> Coded by Matrus\n> Use ^C (Ctrl/Command+C) to exit\n');
+const prompt = require('readline-sync').question,
+      zlib = require('zlib');
+console.log('> A-Gen v1.1.0\n> Based on NobDod algorithm\n> Coded by Matrus\n> Type \\ to enter save menu\n> Use ^C (Ctrl/Command+C) to exit\n');
+let sm = 0;
 while(1) {
-    console.log(`Output > ${[save(prompt('Input > ')), gen()][1]}\n`);
+    if(sm == 1) {
+        console.log('Save menu\n1 > Save\n2 > Load\n');
+    };
+    var inp = prompt('Input > ', {encoding: 'utf8'});
+    if(inp == '\\' && !sm) {
+        sm = 1;
+        continue;
+    } else if(sm) {
+        if(inp == '1') {
+            console.log(`Save > ${zlib.deflateSync(Buffer.from(JSON.stringify(curdata), 'utf8').toString('utf8')).toString('base64')}\n`);
+        } else if(inp == '2') {
+            console.log();
+            curdata = JSON.parse(zlib.inflateSync(Buffer.from(prompt('Save > '), 'base64')).toString('utf8'));
+            console.log();
+        } else {
+            console.log('Output > Invalid input\n');
+        };
+        sm = 0;
+        continue;
+    };
+    if(!sm) console.log(`Output > ${[save(inp), gen()][1]}\n`);
 };
