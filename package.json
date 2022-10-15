@@ -1,0 +1,30 @@
+{
+  "name": "a-gen",
+  "version": "1.0.0",
+  "description": "A simple script that generates word chains based on your inputs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mat1rus/a-gen.git"
+  },
+  "keywords": [
+    "a-gen",
+    "agen",
+    "nobdod"
+  ],
+  "author": "Matrus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mat1rus/a-gen/issues"
+  },
+  "homepage": "https://github.com/mat1rus/a-gen#readme",
+  "bin": {
+    "agen": "./index.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
